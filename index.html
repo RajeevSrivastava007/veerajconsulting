@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veeraj Consulting | Zoho Consulting & Implementation for Indian SMEs</title>
+<meta name="description" content="Veeraj Consulting helps MSMEs and SMEs streamline sales, finance, inventory, support and HR with Zoho. Business-first consulting, implementation, automation and training. Book a free discovery call.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14284B;--navy-2:#1E3A66;--blue:#4A9FD8;--blue-soft:#E8F3FB;
+  --zoho:#5646A5;--bg:#FFFFFF;--bg-alt:#F5F8FC;--text:#14284B;--muted:#5A6B85;
+  --line:#E2E8F0;--radius:14px;--max:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:16px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:#fff;padding:8px 12px;z-index:999}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-book{background:var(--zoho);color:#fff}
+.btn-book:hover{background:#463893}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:44px;width:auto}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--navy)}
+.menu-btn{display:none;background:none;border:0;font-size:26px;color:var(--navy);cursor:pointer}
+
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:96px 0 104px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(74,159,216,.25)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.12;font-weight:800;max-width:820px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero p{font-size:1.15rem;color:#C9D6EA;max-width:640px;margin:22px 0 34px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:44px;flex-wrap:wrap;margin-top:56px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
+.hero-stats strong{display:block;font-size:1.9rem;font-weight:800}
+.hero-stats span{font-size:14px;color:#A9BBD6}
+
+/* Sections */
+section{padding:88px 0}
+.alt{background:var(--bg-alt)}
+.head{max-width:680px;margin-bottom:44px}
+.head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;font-weight:800;letter-spacing:-.01em}
+.head p{color:var(--muted);margin-top:12px;font-size:1.05rem}
+
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-decoration:none;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+a.card:hover{border-color:var(--blue);box-shadow:0 8px 24px rgba(20,40,75,.08)}
+.card .ic{width:44px;height:44px;border-radius:10px;background:var(--blue-soft);color:var(--navy);display:grid;place-items:center;font-weight:800;margin-bottom:16px}
+.card h3{font-size:1.08rem;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.card .more{margin-top:auto;padding-top:14px;font-weight:600;font-size:14px;color:var(--blue)}
+
+/* Approach steps */
+.steps{counter-reset:s}
+.step{position:relative;padding:28px 26px 26px;border-top:3px solid var(--blue);background:#fff;border-radius:0 0 var(--radius) var(--radius)}
+.step::before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:14px;color:var(--blue);letter-spacing:.1em}
+.step h3{margin:8px 0;font-size:1.1rem}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* Offers */
+.offer{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column}
+.offer.featured{border:2px solid var(--navy)}
+.offer .tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.offer h3{font-size:1.4rem;margin:8px 0 4px}
+.offer .price{font-size:2rem;font-weight:800;margin:10px 0}
+.offer .price small{font-size:.95rem;font-weight:500;color:var(--muted)}
+.offer ul{list-style:none;margin:10px 0 26px}
+.offer li{padding:6px 0 6px 26px;position:relative;color:var(--muted)}
+.offer li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.offer .btn{margin-top:auto;align-self:flex-start}
+
+/* Industries */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:500}
+
+/* Placeholder */
+.placeholder{border:2px dashed #B8C6DA;border-radius:var(--radius);padding:30px;text-align:center;color:var(--muted);background:#fff}
+
+/* CTA band */
+.cta{background:var(--navy);color:#fff;text-align:center}
+.cta h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800}
+.cta p{color:#C9D6EA;margin:14px auto 30px;max-width:560px}
+
+/* Footer */
+footer{background:#0E1D38;color:#A9BBD6;padding:64px 0 28px;font-size:15px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+footer ul{list-style:none}
+footer li{padding:4px 0}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.f-logo{background:#fff;border-radius:10px;padding:8px 12px;display:inline-block;margin-bottom:14px}
+.f-logo img{height:36px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
+
+/* Floating booking button */
+.float-book{position:fixed;right:20px;bottom:20px;z-index:60;box-shadow:0 8px 24px rgba(86,70,165,.35)}
+
+/* Responsive */
+@media(max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:16px 20px 24px;border-bottom:1px solid var(--line);gap:16px}
+  .nav-links.open{display:flex}
+  .g4,.g2{grid-template-columns:1fr}
+  section{padding:64px 0}.hero{padding:72px 0 80px}
+  .f-grid{grid-template-columns:1fr}
+  .float-book span{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo" aria-label="Veeraj Consulting home"><img src="assets/logo.png" alt="Veeraj Consulting" width="160" height="44"></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="engagement-models.html">How We Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="btn btn-book" onclick="openDiscovery()">Book a Free Call</button></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Zoho Consulting for MSMEs &amp; SMEs</span>
+    <h1>We start with your business, <em>not the software.</em></h1>
+    <p>Veeraj Consulting helps growing Indian businesses run sales, finance, inventory, support and HR on systems that fit how they actually work — designed, built and documented so your own team can run them.</p>
+    <div class="actions">
+      <button class="btn btn-book" onclick="openDiscovery()">Book a Free 20-min Call</button>
+      <a href="services.html" class="btn btn-ghost">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong><span id="yrs">11</span>+ years</strong><span>Hands-on Zoho experience</span></div>
+      <div><strong>10</strong><span>Zoho app categories covered</span></div>
+      <div><strong>MSME → Enterprise</strong><span>Including government-level work</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEMS -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Sound familiar?</span>
+      <h2>Most businesses don't have a software problem. They have a process problem.</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card"><h3>Outgrowing spreadsheets</h3><p>Orders, invoices and stock live in different files, and nobody is sure which one is right.</p></div>
+      <div class="card"><h3>Too many disconnected tools</h3><p>Data is typed twice, reports don't match, and your team spends hours reconciling instead of selling.</p></div>
+      <div class="card"><h3>Zoho set up, but not working</h3><p>You pay for licences, but adoption is low, workflows break and the setup no longer fits the business.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What we do</span>
+      <h2>Zoho consulting, implementation and automation — end to end</h2>
+      <p>From a single app to a full Zoho One rollout, we design around your processes first and the platform second.</p>
+    </div>
+    <div class="grid g4">
+      <a class="card" href="services/zoho-crm.html"><div class="ic">CR</div><h3>Zoho CRM</h3><p>Pipelines, lead routing and sales reporting your team will actually use.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-books.html"><div class="ic">₹</div><h3>Zoho Books &amp; Finance</h3><p>GST-ready accounting, invoicing and payment collection, connected to sales.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-inventory-pos.html"><div class="ic">IN</div><h3>Zoho Inventory &amp; POS</h3><p>Stock, warehouses, orders and retail billing in one accurate view.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-desk.html"><div class="ic">DK</div><h3>Zoho Desk</h3><p>Ticketing, SLAs and customer support that never lets a request slip.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-people.html"><div class="ic">HR</div><h3>Zoho People / HRMS</h3><p>Attendance, leave, onboarding and payroll workflows, simplified.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/custom-development.html"><div class="ic">{ }</div><h3>Custom Development &amp; Automation</h3><p>Blueprints, approvals, Deluge functions and integrations via Zoho Flow and APIs.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/ai-implementation.html"><div class="ic">AI</div><h3>AI-Enabled Implementation</h3><p>Practical use of Zoho Zia and Zoho MCP to predict, summarise and automate.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/training-support.html"><div class="ic">TS</div><h3>Training &amp; Support</h3><p>Hands-on training built on your actual configuration, not generic demos.</p><span class="more">Learn more →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH / WHY US -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Why Veeraj Consulting</span>
+      <h2>A business-first, technology-agnostic approach</h2>
+      <p>We fit the solution to your existing landscape. If Zoho isn't the right answer for part of your business, we'll tell you.</p>
+    </div>
+    <div class="grid g4 steps">
+      <div class="step"><h3>Discover</h3><p>A structured look at how work happens today — where data lives, who touches it and where the friction sits.</p></div>
+      <div class="step"><h3>Design</h3><p>Platform and licensing decisions follow the process, so you pay only for what you need.</p></div>
+      <div class="step"><h3>Deliver</h3><p>Agile, continuous delivery in short cycles, so you see working results early and often.</p></div>
+      <div class="step"><h3>Document &amp; Hand Over</h3><p>Everything documented well enough for your own team to maintain — no ongoing dependency.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="alt" id="start">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Ways to get started</span>
+      <h2>Two simple ways to begin</h2>
+    </div>
+    <div class="grid g2">
+      <div class="offer">
+        <span class="tag">No commitment</span>
+        <h3>Let's Just Talk — Free Discovery Call</h3>
+        <div class="price">Free <small>/ 20 minutes</small></div>
+        <ul>
+          <li>A relaxed conversation about your business</li>
+          <li>A look at your current Zoho setup, if any</li>
+          <li>No agenda, no pitch, no obligation</li>
+        </ul>
+        <button class="btn btn-book" onclick="openDiscovery()">Book the Free Call</button>
+      </div>
+      <div class="offer featured">
+        <span class="tag">Most useful first step</span>
+        <h3>Zoho Health Check — Audit &amp; Roadmap</h3>
+        <div class="price">₹9,999 <small>/ 60-minute session</small></div>
+        <ul>
+          <li>What's broken, what's missing in your setup</li>
+          <li>The 5–7 highest-impact fixes, prioritised</li>
+          <li>Written report and quick-win roadmap</li>
+          <li>Short video walkthrough, all within 48 hours</li>
+        </ul>
+        <button class="btn btn-book" onclick="openAudit()">Book the Health Check</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Industries</span>
+      <h2>Built for how your industry works</h2>
+    </div>
+    <div class="chips">
+      <span class="chip">Trading &amp; FMCG</span>
+      <span class="chip">Logistics &amp; International Trade</span>
+      <span class="chip">Manufacturing</span>
+      <span class="chip">Professional Services</span>
+      <span class="chip">E-commerce</span>
+      <span class="chip">B2B SaaS</span>
+    </div>
+    <p style="margin-top:24px"><a href="industries.html" style="color:var(--blue);font-weight:600;text-decoration:none">See industry solutions →</a></p>
+  </div>
+</section>
+
+<!-- PROOF (placeholders) -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Client results</span>
+      <h2>What our clients say</h2>
+    </div>
+    <div class="grid g3">
+      <div class="placeholder">[Testimonial 1 — quote, name, role, company]</div>
+      <div class="placeholder">[Testimonial 2 — quote, name, role, company]</div>
+      <div class="placeholder">[Client logos strip]</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Let's see what your business really needs.</h2>
+    <p>Start with a free 20-minute conversation. No pitch — just clarity on where you are and what would help most.</p>
+    <button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo"><img src="assets/logo.png" alt="Veeraj Consulting"></div>
+        <p>Business-first Zoho consulting for MSMEs and SMEs. Based in Lucknow, serving clients across India and abroad.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/zoho-crm.html">Zoho CRM</a></li>
+          <li><a href="services/zoho-books.html">Books &amp; Finance</a></li>
+          <li><a href="services/zoho-inventory-pos.html">Inventory &amp; POS</a></li>
+          <li><a href="services/custom-development.html">Automation</a></li>
+          <li><a href="services.html">All services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="engagement-models.html">How We Work</a></li>
+          <li><a href="https://rajeevsrivastava.com" target="_blank" rel="noopener">Founder: Rajeev Srivastava ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:iam@rajeevsrivastava.com">iam@rajeevsrivastava.com</a></li>
+          <li>[Phone / WhatsApp]</li>
+          <li>Lucknow, Uttar Pradesh</li>
+          <li><a href="contact.html">Contact page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>&copy; <span id="yr"></span> Veeraj Consulting. All rights reserved.</span>
+      <span><a href="terms.html">Terms</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="refund-policy.html">Refund &amp; Cancellation</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="btn btn-book float-book" onclick="openDiscovery()" aria-label="Book a free discovery call">📅 <span>Book a Free Call</span></button>
+
+<script>
+// Booking — uses Zoho Bookings modal if the embed script is loaded, else opens in a new tab
+var URL_DISCOVERY="https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000027058";
+var URL_AUDIT="https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000027077";
+function book(u){
+  try{ if(window.Bookings && typeof Bookings.modal==="function"){ Bookings.modal(u); return; } }catch(e){}
+  window.open(u,"_blank","noopener");
+}
+function openDiscovery(){book(URL_DISCOVERY)}
+function openAudit(){book(URL_AUDIT)}
+
+// Years of experience from June 2014
+(function(){var s=new Date(2014,5,1),n=new Date(),y=n.getFullYear()-s.getFullYear();if(n.getMonth()<s.getMonth())y--;document.getElementById("yrs").textContent=y;})();
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+// Mobile menu
+var mb=document.querySelector(".menu-btn"),nl=document.getElementById("navLinks");
+mb.addEventListener("click",function(){var o=nl.classList.toggle("open");mb.setAttribute("aria-expanded",o);});
+</script>
+</body>
+</html>
