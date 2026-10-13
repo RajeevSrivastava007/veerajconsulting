@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | Book a Zoho Consultation | Veeraj Consulting</title>
-<meta name="description" content="Contact Veeraj Consulting for Zoho consulting. Book a free 20-minute discovery call, email rajeev@veerajconsulting.com or call +91 97171 31413.">
+<meta name="description" content="Contact Veeraj Consulting for Zoho consulting. Book a free 30-minute discovery call, email rajeev@veerajconsulting.com or call +91 97171 31413.">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -171,6 +171,8 @@ form textarea{min-height:140px;resize:vertical}
 .cs .stage{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-top:14px}
 @media(max-width:860px){.two,.svc-row,form .row{grid-template-columns:1fr;gap:24px}}
 </style>
+<link rel="stylesheet" href="assets/theme.css">
+<script src="assets/theme.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -208,7 +210,7 @@ form textarea{min-height:140px;resize:vertical}
 <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/company/veeraj-consulting" target="_blank" rel="noopener">Veeraj Consulting ↗</a></li>
 <li><strong>Serving</strong><span style="font-weight:600">Clients in the UK, Europe, the US and India, delivered remotely</span></li>
 </ul>
-<div class="callout" style="margin-top:28px"><h3>Prefer to talk?</h3><p>Book a free 20-minute discovery call at a time that suits you.</p><p style="margin-top:14px"><button class="btn btn-book" onclick="openDiscovery()">Book a Free Call</button></p></div>
+<div class="callout" style="margin-top:28px"><h3>Prefer to talk?</h3><p>Book a free 30-minute discovery call at a time that suits you.</p><p style="margin-top:14px"><button class="btn btn-book" onclick="openDiscovery()">Book a Free Call</button></p></div>
 </div>
 </div></section>
 <script>
@@ -217,7 +219,7 @@ var g=function(i){return document.getElementById(i).value.trim()};var err=docume
 if(!g("n")||!g("m")||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g("e"))){err.textContent="Please add your name, a valid email and a message.";return;}err.textContent="";
 var body="Name: "+g("n")+"\nCompany: "+g("c")+"\nEmail: "+g("e")+"\nPhone: "+g("ph")+"\nInterested in: "+g("i")+"\n\n"+g("m");
 location.href="mailto:rajeev@veerajconsulting.com?subject="+encodeURIComponent("Website enquiry: "+g("i"))+"&body="+encodeURIComponent(body);});
-</script><section class="cta"><div class="wrap"><h2>Let's see what your business really needs.</h2><p>Start with a free 20-minute conversation. No pitch — just clarity on where you are and what would help most.</p><button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button></div></section>
+</script><section class="cta"><div class="wrap"><h2>Let's see what your business really needs.</h2><p>Start with a free 30-minute conversation. No pitch — just clarity on where you are and what would help most.</p><button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button></div></section>
 </main>
 <footer>
   <div class="wrap">
