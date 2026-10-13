@@ -187,7 +187,7 @@ form textarea{min-height:140px;resize:vertical}
   </div>
 </header>
 <main id="main">
-<div class="page-hero"><div class="wrap"><span class="eyebrow">Legal</span><h1>Terms of Service</h1><p class="meta">Effective date: 1 June 2025 · Veeraj Consulting · rajeev@veerajconsulting.com</p></div></div><section><div class="wrap legal">
+<div class="page-hero"><div class="wrap"><span class="eyebrow">Legal</span><h1>Terms of Service</h1><p class="meta">Effective date: 1 April 2026 · Veeraj Consulting · rajeev@veerajconsulting.com</p></div></div><section><div class="wrap legal">
 <p>By booking and paying for any consultation session or service with Veeraj Consulting ("we", "us"), you agree to these Terms of Service. Please read them carefully before booking.</p>
 <h2>01. Nature of services</h2><p>Veeraj Consulting provides professional consulting, solution architecture, implementation and advisory services related to Zoho platforms and business process design. Sessions are delivered online via Zoho Meeting unless otherwise agreed in writing before the session.</p>
 <h2>02. Booking and payment</h2><p>All paid sessions must be booked and paid for in advance through our booking portal. A booking is confirmed only on receipt of full payment. Prices are as listed at the time of booking and include applicable taxes unless stated otherwise.</p>
@@ -198,7 +198,7 @@ form textarea{min-height:140px;resize:vertical}
 <h2>07. Confidentiality</h2><p>Both parties will keep genuinely sensitive or proprietary business information shared during engagements confidential and will not disclose it to third parties without prior written consent. This does not restrict our rights under Clause 06.</p>
 <h2>08. Intellectual property</h2><p>Materials, frameworks, documents and methodologies we share or produce remain the intellectual property of Veeraj Consulting unless explicitly transferred in writing. Clients receive a non-transferable licence to use them for their own internal business purposes.</p>
 <h2>09. Limitation of liability</h2><p>Our total liability for any claim arising from services shall not exceed the amount paid by the client for the specific session or service in question. We are not liable for indirect, consequential or incidental damages.</p>
-<h2>10. Governing law</h2><p>These Terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts in New Delhi, India.</p>
+<h2>10. Governing law</h2><p>These Terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts in Lucknow, India.</p>
 <h2>11. Changes to these terms</h2><p>We may update these Terms at any time. The latest version will always be available on this page. Continued use of our booking portal after an update means you accept the revised Terms.</p>
 <h2>Contact</h2><p>For any questions about these Terms, write to <a href="mailto:rajeev@veerajconsulting.com" style="color:var(--blue)">rajeev@veerajconsulting.com</a>.</p></div></section><section class="cta"><div class="wrap"><h2>Questions before you book?</h2><p>Write to us or start with a free 30-minute call — we're happy to clarify anything in advance.</p><button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button></div></section>
 </main>
@@ -257,10 +257,12 @@ mb.addEventListener("click",function(){var o=nl.classList.toggle("open");mb.setA
 </script>
 <script>
 (function(){var els=document.querySelectorAll(".usd");if(!els.length)return;
-function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(USD "+v+")"});}
-var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd")||"null")}catch(e){}
-if(c&&Date.now()-c.t<432e5){show(c.r);return;}
-fetch("https://open.er-api.com/v6/latest/INR").then(function(r){return r.json()}).then(function(d){var r=d&&d.rates&&d.rates.USD;if(!r)return;show(r);try{localStorage.setItem("vc_inrusd",JSON.stringify({r:r,t:Date.now()}))}catch(e){}}).catch(function(){});})();
+function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(≈ USD "+v+")";e.title="Approximate, based on today's market rate"});}
+var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd2")||"null")}catch(e){}
+if(c&&Date.now()-c.t<36e5){show(c.r);return;}
+function save(r){show(r);try{localStorage.setItem("vc_inrusd2",JSON.stringify({r:r,t:Date.now()}))}catch(e){}}
+function er(){return fetch("https://open.er-api.com/v6/latest/INR").then(function(r){return r.json()}).then(function(d){var r=d&&d.rates&&d.rates.USD;if(r)save(r)})}
+fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/inr.json").then(function(r){return r.json()}).then(function(d){var r=d&&d.inr&&d.inr.usd;if(r)save(r);else return er()}).catch(function(){er().catch(function(){})});})();
 </script>
 </body>
 </html>

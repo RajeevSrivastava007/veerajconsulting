@@ -187,7 +187,7 @@ form textarea{min-height:140px;resize:vertical}
   </div>
 </header>
 <main id="main">
-<div class="page-hero"><div class="wrap"><span class="eyebrow">Legal</span><h1>Refund &amp; Cancellation Policy</h1><p class="meta">Effective date: 1 June 2025 · Veeraj Consulting · rajeev@veerajconsulting.com</p></div></div><section><div class="wrap legal">
+<div class="page-hero"><div class="wrap"><span class="eyebrow">Legal</span><h1>Refund &amp; Cancellation Policy</h1><p class="meta">Effective date: 1 April 2026 · Veeraj Consulting · rajeev@veerajconsulting.com</p></div></div><section><div class="wrap legal">
 <p>Consultation sessions are delivered on a time and expertise basis. Once a session is booked and paid for, the slot is reserved exclusively for you and preparation begins. Please read this policy before booking.</p>
 <h2>Policy at a glance</h2>
 <table><thead><tr><th>Situation</th><th>Refund</th><th>Cancellation</th><th>Rescheduling</th></tr></thead><tbody>
@@ -260,10 +260,12 @@ mb.addEventListener("click",function(){var o=nl.classList.toggle("open");mb.setA
 </script>
 <script>
 (function(){var els=document.querySelectorAll(".usd");if(!els.length)return;
-function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(USD "+v+")"});}
-var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd")||"null")}catch(e){}
-if(c&&Date.now()-c.t<432e5){show(c.r);return;}
-fetch("https://open.er-api.com/v6/latest/INR").then(function(r){return r.json()}).then(function(d){var r=d&&d.rates&&d.rates.USD;if(!r)return;show(r);try{localStorage.setItem("vc_inrusd",JSON.stringify({r:r,t:Date.now()}))}catch(e){}}).catch(function(){});})();
+function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(≈ USD "+v+")";e.title="Approximate, based on today's market rate"});}
+var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd2")||"null")}catch(e){}
+if(c&&Date.now()-c.t<36e5){show(c.r);return;}
+function save(r){show(r);try{localStorage.setItem("vc_inrusd2",JSON.stringify({r:r,t:Date.now()}))}catch(e){}}
+function er(){return fetch("https://open.er-api.com/v6/latest/INR").then(function(r){return r.json()}).then(function(d){var r=d&&d.rates&&d.rates.USD;if(r)save(r)})}
+fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/inr.json").then(function(r){return r.json()}).then(function(d){var r=d&&d.inr&&d.inr.usd;if(r)save(r);else return er()}).catch(function(){er().catch(function(){})});})();
 </script>
 </body>
 </html>
