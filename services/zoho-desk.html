@@ -143,7 +143,8 @@ footer a:hover{color:#fff}
 .callout h3{font-size:1.2rem;margin-bottom:8px}
 .callout p{color:var(--muted)}
 @media(max-width:860px){.split,.founder{grid-template-columns:1fr;gap:32px}.founder img{max-width:300px}}
-
+.was{font-size:.55em;color:#8A97AB;font-weight:500;margin-right:6px}.usd{font-size:.5em;color:var(--muted);font-weight:600}.hero-stats strong span{font-size:inherit;color:inherit}
+.was{font-size:.55em;color:#8A97AB;font-weight:500;margin-right:6px}.usd{font-size:.5em;color:var(--muted);font-weight:600}.hero-stats strong span{font-size:inherit;color:inherit}
 .crumb{font-size:14px;color:#A9BBD6;margin-bottom:14px}.crumb a{text-decoration:none;color:#C9D6EA}
 .list{list-style:none}.list li{padding:8px 0 8px 28px;position:relative;color:var(--muted)}
 .list li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
@@ -191,7 +192,7 @@ form textarea{min-height:140px;resize:vertical}
 <section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">Outcomes</span><h2>What changes for your business</h2></div>
 <div class="grid g3"><div class="card"><h3>Every request tracked to closure</h3></div><div class="card"><h3>Faster response times with clear SLAs</h3></div><div class="card"><h3>Fewer repeat questions through self-service</h3></div></div>
 <p style="margin-top:28px;color:var(--muted)"><strong style="color:var(--navy)">Tools we work with:</strong> Zoho Desk · Zoho SalesIQ · Zoho Voice · Zoho Assist</p></div></section>
-<section><div class="wrap"><div class="callout"><h3>Already using Zoho?</h3><p>Our 60-minute Zoho Health Check (₹9,999) shows what's broken, what's missing and the 5–7 highest-impact fixes — with a written report and roadmap within 48 hours.</p><p style="margin-top:14px"><button class="btn btn-book" onclick="openAudit()">Book the Health Check</button></p></div></div></section>
+<section><div class="wrap"><div class="callout"><h3>Already using Zoho?</h3><p>Our 60-minute Zoho Health Check (<s class="was">₹14,999</s> ₹9,999 <span class="usd"></span>) shows what's broken, what's missing and the 5–7 highest-impact fixes — with a written report and roadmap within 48 hours.</p><p style="margin-top:14px"><button class="btn btn-book" onclick="openAudit()">Book the Health Check</button></p></div></div></section>
 <section class="cta"><div class="wrap"><h2>Let's see what your business really needs.</h2><p>Start with a free 20-minute conversation. No pitch — just clarity on where you are and what would help most.</p><button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button></div></section>
 </main>
 <footer>
@@ -199,7 +200,7 @@ form textarea{min-height:140px;resize:vertical}
     <div class="f-grid">
       <div>
         <div class="f-logo"><img src="../assets/logo.png" alt="Veeraj Consulting"></div>
-        <p>Business-first Zoho consulting for MSMEs and SMEs. Serving clients across India and abroad.</p>
+        <p>Business-first Zoho consulting for growing businesses. Serving clients in the UK, Europe, the US and India.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -246,6 +247,13 @@ function openAudit(){book(URL_AUDIT)}
 document.getElementById("yr").textContent=new Date().getFullYear();
 var mb=document.querySelector(".menu-btn"),nl=document.getElementById("navLinks");
 mb.addEventListener("click",function(){var o=nl.classList.toggle("open");mb.setAttribute("aria-expanded",o);});
+</script>
+<script>
+(function(){var els=document.querySelectorAll(".usd");if(!els.length)return;
+function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(USD "+v+")"});}
+var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd")||"null")}catch(e){}
+if(c&&Date.now()-c.t<432e5){show(c.r);return;}
+fetch("https://open.er-api.com/v6/latest/INR").then(function(r){return r.json()}).then(function(d){var r=d&&d.rates&&d.rates.USD;if(!r)return;show(r);try{localStorage.setItem("vc_inrusd",JSON.stringify({r:r,t:Date.now()}))}catch(e){}}).catch(function(){});})();
 </script>
 </body>
 </html>

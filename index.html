@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veeraj Consulting | Zoho Consulting & Implementation for Indian SMEs</title>
-<meta name="description" content="Veeraj Consulting helps MSMEs and SMEs streamline sales, finance, inventory, support and HR with Zoho. Business-first consulting, implementation, automation and training. Book a free discovery call.">
+<title>Veeraj Consulting | Zoho Consulting &amp; Implementation for Growing Businesses</title>
+<meta name="description" content="Veeraj Consulting helps small and mid-sized businesses in the UK, Europe, the US and India streamline sales, finance, inventory, support and HR with Zoho. Business-first consulting, implementation, automation and training. Book a free discovery call.">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -128,7 +128,7 @@ footer a:hover{color:#fff}
   .float-book span{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+.was{font-size:.55em;color:#8A97AB;font-weight:500;margin-right:6px}.usd{font-size:.5em;color:var(--muted);font-weight:600}.hero-stats strong span{font-size:inherit;color:inherit}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -154,9 +154,9 @@ footer a:hover{color:#fff}
 <!-- HERO -->
 <div class="hero">
   <div class="wrap">
-    <span class="eyebrow">Zoho Consulting for MSMEs &amp; SMEs</span>
+    <span class="eyebrow">Zoho Consulting for Growing Businesses</span>
     <h1>We start with your business, <em>not the software.</em></h1>
-    <p>Veeraj Consulting helps growing Indian businesses run sales, finance, inventory, support and HR on systems that fit how they actually work — designed, built and documented so your own team can run them.</p>
+    <p>Veeraj Consulting helps growing businesses across the UK, Europe, the US and India run sales, finance, inventory, support and HR on systems that fit how they actually work — designed, built and documented so your own team can run them.</p>
     <div class="actions">
       <button class="btn btn-book" onclick="openDiscovery()">Book a Free 20-min Call</button>
       <a href="services.html" class="btn btn-ghost">Explore Services</a>
@@ -164,7 +164,7 @@ footer a:hover{color:#fff}
     <div class="hero-stats">
       <div><strong><span id="yrs">11</span>+ years</strong><span>Hands-on Zoho experience</span></div>
       <div><strong>10</strong><span>Zoho app categories covered</span></div>
-      <div><strong>MSME → Enterprise</strong><span>Including government-level work</span></div>
+      <div><strong>SME → Enterprise</strong><span>Including government-level work</span></div>
     </div>
   </div>
 </div>
@@ -194,7 +194,7 @@ footer a:hover{color:#fff}
     </div>
     <div class="grid g4">
       <a class="card" href="services/zoho-crm.html"><div class="ic">CR</div><h3>Zoho CRM</h3><p>Pipelines, lead routing and sales reporting your team will actually use.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/zoho-books.html"><div class="ic">₹</div><h3>Zoho Books &amp; Finance</h3><p>GST-ready accounting, invoicing and payment collection, connected to sales.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-books.html"><div class="ic">FIN</div><h3>Zoho Books &amp; Finance</h3><p>Tax-ready accounting (VAT, sales tax or GST), invoicing and payment collection, connected to sales.</p><span class="more">Learn more →</span></a>
       <a class="card" href="services/zoho-inventory-pos.html"><div class="ic">IN</div><h3>Zoho Inventory &amp; POS</h3><p>Stock, warehouses, orders and retail billing in one accurate view.</p><span class="more">Learn more →</span></a>
       <a class="card" href="services/zoho-desk.html"><div class="ic">DK</div><h3>Zoho Desk</h3><p>Ticketing, SLAs and customer support that never lets a request slip.</p><span class="more">Learn more →</span></a>
       <a class="card" href="services/zoho-people.html"><div class="ic">HR</div><h3>Zoho People / HRMS</h3><p>Attendance, leave, onboarding and payroll workflows, simplified.</p><span class="more">Learn more →</span></a>
@@ -244,7 +244,7 @@ footer a:hover{color:#fff}
       <div class="offer featured">
         <span class="tag">Most useful first step</span>
         <h3>Zoho Health Check — Audit &amp; Roadmap</h3>
-        <div class="price">₹9,999 <small>/ 60-minute session</small></div>
+        <div class="price"><s class="was">₹14,999</s> ₹9,999 <span class="usd"></span> <small>/ 60-minute session</small></div>
         <ul>
           <li>What's broken, what's missing in your setup</li>
           <li>The 5–7 highest-impact fixes, prioritised</li>
@@ -295,7 +295,7 @@ footer a:hover{color:#fff}
     <div class="f-grid">
       <div>
         <div class="f-logo"><img src="assets/logo.png" alt="Veeraj Consulting"></div>
-        <p>Business-first Zoho consulting for MSMEs and SMEs. Serving clients across India and abroad.</p>
+        <p>Business-first Zoho consulting for growing businesses. Serving clients in the UK, Europe, the US and India.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -353,6 +353,13 @@ document.getElementById("yr").textContent=new Date().getFullYear();
 // Mobile menu
 var mb=document.querySelector(".menu-btn"),nl=document.getElementById("navLinks");
 mb.addEventListener("click",function(){var o=nl.classList.toggle("open");mb.setAttribute("aria-expanded",o);});
+</script>
+<script>
+(function(){var els=document.querySelectorAll(".usd");if(!els.length)return;
+function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(USD "+v+")"});}
+var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd")||"null")}catch(e){}
+if(c&&Date.now()-c.t<432e5){show(c.r);return;}
+fetch("https://open.er-api.com/v6/latest/INR").then(function(r){return r.json()}).then(function(d){var r=d&&d.rates&&d.rates.USD;if(!r)return;show(r);try{localStorage.setItem("vc_inrusd",JSON.stringify({r:r,t:Date.now()}))}catch(e){}}).catch(function(){});})();
 </script>
 </body>
 </html>
