@@ -1,178 +1,239 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veeraj Consulting | Zoho Consulting &amp; Implementation for Growing Businesses</title>
-<meta name="description" content="Veeraj Consulting helps small and mid-sized businesses in the UK, Europe, the US and India streamline sales, finance, inventory, support and HR with Zoho. Business-first consulting, implementation, automation and training. Book a free discovery call.">
+<title>Veeraj Consulting | Zoho Consulting, Automation & AI for Growing Businesses</title>
+<meta name="description" content="Veeraj Consulting designs Zoho workflows that capture, check and move work forward on their own, for growing businesses across the UK, Europe, the US and India. Book a free 30-minute call.">
 <link rel="icon" href="assets/favicon.png">
+<script>
+/* Theme before paint: saved choice wins, else visitor's local time (light 6am–6pm). */
+(function(){var t=null;try{t=localStorage.getItem("vc_theme")}catch(e){}
+if(t!=="light"&&t!=="dark"){var h=new Date().getHours();t=(h>=6&&h<18)?"light":"dark"}
+document.documentElement.setAttribute("data-theme",t);})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#14284B;--navy-2:#1E3A66;--blue:#4A9FD8;--blue-soft:#E8F3FB;
-  --zoho:#5646A5;--bg:#FFFFFF;--bg-alt:#F5F8FC;--text:#14284B;--muted:#5A6B85;
-  --line:#E2E8F0;--radius:14px;--max:1180px;
+  --bg:#F7F8FA;--dot:rgba(20,40,75,.10);--surf:#FFFFFF;--line:#E1E7EF;--fg:#0F1E38;--muted:#4F5E76;
+  --acc:#0B7F7D;--acc2:#1E6FB0;--chip:#E3F4F3;--pill:transparent;--book:#5646A5;--book-h:#463893;
+  --shadow:0 24px 50px -30px rgba(15,30,56,.35);--max:1200px;color-scheme:light;
+}
+html[data-theme=dark]{
+  --bg:#070F1D;--dot:rgba(255,255,255,.07);--surf:#0E1A2D;--line:#1F2F48;--fg:#EDF2F8;--muted:#9AABC4;
+  --acc:#2DD4BF;--acc2:#6BB6EA;--chip:rgba(45,212,191,.12);--pill:#FFFFFF;
+  --shadow:0 24px 50px -30px rgba(0,0,0,.8);color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.65;font-size:16px}
-a{color:inherit}
+body{font-family:Sora,system-ui,sans-serif;color:var(--fg);line-height:1.6;font-size:16px;
+  background-color:var(--bg);background-image:radial-gradient(var(--dot) 1.2px,transparent 1.2px);background-size:22px 22px;
+  transition:background-color .5s,color .5s}
+a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:#fff;padding:8px 12px;z-index:999}
-:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--surf);padding:8px 12px;z-index:999}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s,background .2s}
-.btn:hover{transform:translateY(-1px)}
-.btn-book{background:var(--zoho);color:#fff}
-.btn-book:hover{background:#463893}
-.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:12px;font:600 15px/1.2 Sora,system-ui,sans-serif;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-book{background:var(--book);color:#fff}.btn-book:hover{background:var(--book-h)}
+.btn-ghost{background:var(--surf);border-color:var(--line);color:var(--fg)}.btn-ghost:hover{border-color:var(--acc)}
 
 /* Header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;text-decoration:none}
-.logo img{height:44px;width:auto}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-.nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
-.nav-links a:hover,.nav-links a[aria-current]{color:var(--navy)}
-.menu-btn{display:none;background:none;border:0;font-size:26px;color:var(--navy);cursor:pointer}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:76px}
+.logo{background:var(--pill);border-radius:12px;padding:6px 12px;display:flex;margin-left:-12px}
+.logo img{height:34px;width:auto}
+.nav-links{display:flex;gap:28px;list-style:none;margin-left:auto;font-size:14.5px;font-weight:500}
+.nav-links a{color:var(--muted)}.nav-links a:hover,.nav-links a[aria-current]{color:var(--fg)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.nav-cta .btn{padding:12px 20px}
+.icon-btn{width:44px;height:44px;border-radius:12px;background:var(--surf);border:1px solid var(--line);color:var(--fg);cursor:pointer;display:grid;place-items:center;flex:none}
+.icon-btn:hover{border-color:var(--acc)}
+.sun{display:none}html[data-theme=dark] .sun{display:block}html[data-theme=dark] .moon{display:none}
+.menu-btn{display:none}
+
+/* Animations */
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes travel{0%{left:0%}100%{left:100%}}
+@keyframes lit{0%,100%{border-color:var(--line)}40%,60%{border-color:var(--acc)}}
+@keyframes litai{0%,100%{border-color:#5646A5}40%,60%{border-color:var(--acc)}}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+.up{animation:up .9s cubic-bezier(.2,.7,.2,1) both}.d1{animation-delay:.15s}.d2{animation-delay:.3s}.d3{animation-delay:.45s}.d4{animation-delay:.6s}
 
 /* Hero */
-.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:96px 0 104px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(74,159,216,.25)}
-.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
-.hero h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.12;font-weight:800;max-width:820px;letter-spacing:-.02em}
-.hero h1 em{font-style:normal;color:var(--blue)}
-.hero p{font-size:1.15rem;color:#C9D6EA;max-width:640px;margin:22px 0 34px}
-.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-stats{display:flex;gap:44px;flex-wrap:wrap;margin-top:56px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
-.hero-stats strong{display:block;font-size:1.9rem;font-weight:800}
-.hero-stats span{font-size:14px;color:#A9BBD6}
+.hero{padding:88px 0 40px;text-align:center}
+.chip{display:inline-flex;gap:8px;align-items:center;background:var(--chip);color:var(--acc);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--acc);animation:blink 1.6s ease-in-out infinite}
+.hero h1{font-weight:700;font-size:clamp(38px,5.4vw,74px);line-height:1.06;letter-spacing:-.035em;margin:24px auto 22px;max-width:960px}
+.hero h1 span{color:var(--acc)}
+.hero p{font-size:clamp(17px,1.6vw,19px);line-height:1.65;color:var(--muted);margin:0 auto 34px;max-width:660px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:52px}
+.stats strong{display:block;font-size:26px;font-weight:700;letter-spacing:-.02em}
+.stats span{font-size:13.5px;color:var(--muted)}
+.stats strong span{font-size:inherit;color:inherit}
+
+/* Workflow strip */
+.flow{padding:48px 0 96px}
+.flow-label{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;text-align:center}
+.flow-inner{position:relative;max-width:1240px;margin:0 auto}
+.track{position:absolute;left:10%;right:10%;top:62px;height:2px;background:var(--line)}
+.dotrun{position:absolute;top:-5px;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 6px var(--chip);animation:travel 6s linear infinite}
+.pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;position:relative;list-style:none}
+.step{background:var(--surf);border:1.5px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow);animation:lit 6s linear infinite}
+.step.s2{animation-delay:1.2s;animation-name:litai;border-color:#5646A5}.step.s3{animation-delay:2.4s}.step.s4{animation-delay:3.6s}.step.s5{animation-delay:4.8s}
+.step small{font-size:12px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.step.s2 small{color:#8B7BE0}
+.step b{display:block;font-weight:600;margin-top:6px}
+.step p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
 
 /* Sections */
-section{padding:88px 0}
-.alt{background:var(--bg-alt)}
-.head{max-width:680px;margin-bottom:44px}
-.head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);line-height:1.2;font-weight:800;letter-spacing:-.01em}
-.head p{color:var(--muted);margin-top:12px;font-size:1.05rem}
+section.block{padding:0 0 96px}
+.head{margin-bottom:32px;max-width:720px}
+.eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+.head h2{font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.025em}
+.head p{color:var(--muted);margin-top:12px;font-size:17px}
+.grid{display:grid;gap:18px}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.card .tag{color:var(--acc2);font-weight:600;font-size:13px}
+.card h3{font-size:19px;margin:10px 0 8px;font-weight:600;letter-spacing:-.01em}
+.card p{color:var(--muted);line-height:1.6;font-size:15px}
+.card .more{margin-top:auto;padding-top:16px;font-weight:600;font-size:14px;color:var(--acc)}
 
-.grid{display:grid;gap:20px}
-.g4{grid-template-columns:repeat(4,1fr)}
-.g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-decoration:none;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
-a.card:hover{border-color:var(--blue);box-shadow:0 8px 24px rgba(20,40,75,.08)}
-.card .ic{width:44px;height:44px;border-radius:10px;background:var(--blue-soft);color:var(--navy);display:grid;place-items:center;font-weight:800;margin-bottom:16px}
-.card h3{font-size:1.08rem;font-weight:700;margin-bottom:8px}
-.card p{color:var(--muted);font-size:.95rem}
-.card .more{margin-top:auto;padding-top:14px;font-weight:600;font-size:14px;color:var(--blue)}
-
-/* Approach steps */
-.steps{counter-reset:s}
-.step{position:relative;padding:28px 26px 26px;border-top:3px solid var(--blue);background:#fff;border-radius:0 0 var(--radius) var(--radius)}
-.step::before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:14px;color:var(--blue);letter-spacing:.1em}
-.step h3{margin:8px 0;font-size:1.1rem}
-.step p{color:var(--muted);font-size:.95rem}
+/* Approach */
+.steps4{counter-reset:s}
+.steps4 .card::before{counter-increment:s;content:"0" counter(s);font-weight:700;font-size:13px;color:var(--acc);letter-spacing:.1em}
 
 /* Offers */
-.offer{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column}
-.offer.featured{border:2px solid var(--navy)}
-.offer .tag{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-.offer h3{font-size:1.4rem;margin:8px 0 4px}
-.offer .price{font-size:2rem;font-weight:800;margin:10px 0}
-.offer .price small{font-size:.95rem;font-weight:500;color:var(--muted)}
-.offer ul{list-style:none;margin:10px 0 26px}
-.offer li{padding:6px 0 6px 26px;position:relative;color:var(--muted)}
-.offer li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.offer{background:var(--surf);border:1px solid var(--line);border-radius:24px;padding:36px;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+.offer:hover{transform:translateY(-4px);border-color:var(--acc)}
+.offer.featured{border:1.5px solid var(--acc)}
+.offer .tag{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--acc2)}
+.offer h3{font-size:22px;margin:10px 0 4px;font-weight:600;letter-spacing:-.01em}
+.price{font-size:32px;font-weight:700;margin:12px 0 6px;letter-spacing:-.02em}
+.price small{font-size:14px;font-weight:500;color:var(--muted)}
+.was{font-size:.55em;color:var(--muted);opacity:.75;font-weight:500;margin-right:6px}
+.usd{font-size:.5em;color:var(--muted);font-weight:600}
+.offer ul{list-style:none;margin:12px 0 28px}
+.offer li{padding:6px 0 6px 26px;position:relative;color:var(--muted);font-size:15px}
+.offer li::before{content:"✓";position:absolute;left:0;color:var(--acc);font-weight:700}
 .offer .btn{margin-top:auto;align-self:flex-start}
 
-/* Industries */
-.chips{display:flex;flex-wrap:wrap;gap:12px}
-.chip{padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:500}
-
-/* Placeholder */
-.placeholder{border:2px dashed #B8C6DA;border-radius:var(--radius);padding:30px;text-align:center;color:var(--muted);background:#fff}
+/* Industries strip */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.ind{padding:11px 18px;border-radius:999px;background:var(--surf);border:1px solid var(--line);font-weight:500;font-size:15px;transition:border-color .3s}
+.ind:hover{border-color:var(--acc)}
+.link{display:inline-block;margin-top:22px;color:var(--acc);font-weight:600}
 
 /* CTA band */
-.cta{background:var(--navy);color:#fff;text-align:center}
-.cta h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800}
-.cta p{color:#C9D6EA;margin:14px auto 30px;max-width:560px}
+.cta{background:var(--surf);border:1px solid var(--line);border-radius:28px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.cta h2{font-weight:700;font-size:clamp(26px,3vw,34px);letter-spacing:-.02em;margin-bottom:8px;line-height:1.2}
+.cta p{color:var(--muted);font-size:17px}
 
 /* Footer */
-footer{background:#0E1D38;color:#A9BBD6;padding:64px 0 28px;font-size:15px}
+footer{border-top:1px solid var(--line);background:var(--surf);color:var(--muted);padding:64px 0 28px;font-size:15px}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
-footer h4{color:#fff;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
-footer ul{list-style:none}
-footer li{padding:4px 0}
-footer a{text-decoration:none}
-footer a:hover{color:#fff}
-.f-logo{background:#fff;border-radius:10px;padding:8px 12px;display:inline-block;margin-bottom:14px}
-.f-logo img{height:36px}
-.f-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
+footer h4{color:var(--fg);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;font-weight:600}
+footer ul{list-style:none}footer li{padding:4px 0}
+footer a:hover{color:var(--acc)}
+.f-logo{background:var(--pill);border-radius:10px;padding:6px 10px;display:inline-flex;margin:0 0 14px -10px}
+.f-logo img{height:34px}
+.f-bottom{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
 
-/* Floating booking button */
-.float-book{position:fixed;right:20px;bottom:20px;z-index:60;box-shadow:0 8px 24px rgba(86,70,165,.35)}
+.float-book{position:fixed;right:20px;bottom:20px;z-index:60;box-shadow:0 10px 28px rgba(86,70,165,.4)}
 
 /* Responsive */
-@media(max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:760px){
-  .menu-btn{display:block}
-  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:16px 20px 24px;border-bottom:1px solid var(--line);gap:16px}
+@media(max-width:1060px){.nav-links{gap:20px}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){
+  .pipe{grid-template-columns:repeat(2,minmax(0,1fr))}.track{display:none}
+  .g3,.g2{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}
+  .menu-btn{display:grid}
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--surf);border-bottom:1px solid var(--line);flex-direction:column;padding:18px 20px 24px;gap:16px;margin:0}
   .nav-links.open{display:flex}
-  .g4,.g2{grid-template-columns:1fr}
-  section{padding:64px 0}.hero{padding:72px 0 80px}
-  .f-grid{grid-template-columns:1fr}
-  .float-book span{display:none}
+  .nav-cta{margin-left:auto}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-.was{font-size:.55em;color:#8A97AB;font-weight:500;margin-right:6px}.usd{font-size:.5em;color:var(--muted);font-weight:600}.hero-stats strong span{font-size:inherit;color:inherit}</style>
-<link rel="stylesheet" href="assets/theme.css">
-<script src="assets/theme.js"></script>
+@media(max-width:600px){
+  .g4,.f-grid{grid-template-columns:1fr}
+  .nav-cta .btn-book{display:none}
+  .hero{padding:56px 0 24px}.cta{padding:36px 28px}.offer{padding:28px}
+  .float-book span{display:none}
+  .stats{gap:28px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="logo" aria-label="Veeraj Consulting home"><img src="assets/logo.png" alt="Veeraj Consulting" width="146" height="44"></a>
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <a href="index.html" class="logo" aria-label="Veeraj Consulting home"><img src="assets/logo.png" alt="Veeraj Consulting" width="113" height="34"></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="industries.html">Industries</a></li>
       <li><a href="engagement-models.html">How We Work</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><button class="btn btn-book" onclick="openDiscovery()">Book a Free Call</button></li>
     </ul>
+    <div class="nav-cta">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+        <svg class="sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="btn btn-book" type="button" onclick="openDiscovery()">Book a Free Call</button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <main id="main">
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Zoho Consulting for Growing Businesses</span>
-    <h1>We start with your business, <em>not the software.</em></h1>
-    <p>Veeraj Consulting helps growing businesses across the UK, Europe, the US and India run sales, finance, inventory, support and HR on systems that fit how they actually work — designed, built and documented so your own team can run them.</p>
-    <div class="actions">
-      <button class="btn btn-book" onclick="openDiscovery()">Book a Free 30-min Call</button>
-      <a href="services.html" class="btn btn-ghost">Explore Services</a>
+    <div class="chip up"><i aria-hidden="true"></i>Zoho consulting · process automation · AI</div>
+    <h1 class="up d1">Let your systems do the <span>busywork.</span></h1>
+    <p class="up d2">We design Zoho workflows that capture, check and move work forward on their own, for growing businesses across the UK, Europe, the US and India. Built around how you work, documented so your own team can run them.</p>
+    <div class="actions up d3">
+      <button class="btn btn-book" type="button" onclick="openDiscovery()">Book a free 30-min call</button>
+      <button class="btn btn-ghost" type="button" onclick="openAudit()">Zoho Health Check · ₹9,999</button>
     </div>
-    <div class="hero-stats">
-      <div><strong><span id="yrs">11</span>+ years</strong><span>Hands-on Zoho experience</span></div>
+    <div class="stats up d4">
+      <div><strong><span class="yrs">12</span>+ years</strong><span>Hands-on Zoho experience</span></div>
       <div><strong>10</strong><span>Zoho app categories covered</span></div>
       <div><strong>SME → Enterprise</strong><span>Including government-level work</span></div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- WORKFLOW STRIP -->
+<section class="flow" aria-labelledby="flowLabel">
+  <div class="wrap">
+    <div class="flow-label" id="flowLabel">Example workflow · enquiry to invoice</div>
+    <div class="flow-inner">
+      <div class="track" aria-hidden="true"><div class="dotrun"></div></div>
+      <ol class="pipe">
+        <li class="step"><small>Trigger</small><b>Enquiry arrives</b><p>Web form · email · WhatsApp</p></li>
+        <li class="step s2"><small><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="#8B7BE0"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z"/></svg>AI step</small><b>Read &amp; tag</b><p>Zia sorts intent and priority</p></li>
+        <li class="step s3"><small>CRM</small><b>Assign &amp; quote</b><p>Right owner, right template</p></li>
+        <li class="step s4"><small>Blueprint</small><b>Approve</b><p>Rules, limits, audit trail</p></li>
+        <li class="step s5"><small>Books</small><b>Invoice &amp; notify</b><p>Customer updated automatically</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
 <!-- PROBLEMS -->
-<section>
+<section class="block">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Sound familiar?</span>
@@ -187,48 +248,48 @@ footer a:hover{color:#fff}
 </section>
 
 <!-- SERVICES -->
-<section class="alt">
+<section class="block">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">What we do</span>
-      <h2>Zoho consulting, implementation and automation — end to end</h2>
+      <span class="eyebrow">Where we help</span>
+      <h2>Implement, automate, enable — end to end</h2>
       <p>From a single app to a full Zoho One rollout, we design around your processes first and the platform second.</p>
     </div>
     <div class="grid g4">
-      <a class="card" href="services/zoho-crm.html"><div class="ic">CR</div><h3>Zoho CRM</h3><p>Pipelines, lead routing and sales reporting your team will actually use.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/zoho-books.html"><div class="ic">FIN</div><h3>Zoho Books &amp; Finance</h3><p>Tax-ready accounting (VAT, sales tax or GST), invoicing and payment collection, connected to sales.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/zoho-inventory-pos.html"><div class="ic">IN</div><h3>Zoho Inventory &amp; POS</h3><p>Stock, warehouses, orders and retail billing in one accurate view.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/zoho-desk.html"><div class="ic">DK</div><h3>Zoho Desk</h3><p>Ticketing, SLAs and customer support that never lets a request slip.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/zoho-people.html"><div class="ic">HR</div><h3>Zoho People / HRMS</h3><p>Attendance, leave, onboarding and payroll workflows, simplified.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/custom-development.html"><div class="ic">{ }</div><h3>Custom Development &amp; Automation</h3><p>Blueprints, approvals, Deluge functions and integrations via Zoho Flow and APIs.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/ai-implementation.html"><div class="ic">AI</div><h3>AI-Enabled Implementation</h3><p>Practical use of Zoho Zia and Zoho MCP to predict, summarise and automate.</p><span class="more">Learn more →</span></a>
-      <a class="card" href="services/training-support.html"><div class="ic">TS</div><h3>Training &amp; Support</h3><p>Hands-on training built on your actual configuration, not generic demos.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-crm.html"><span class="tag">Implement</span><h3>Zoho CRM</h3><p>Pipelines, lead routing and sales reporting your team will actually use.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-books.html"><span class="tag">Implement</span><h3>Zoho Books &amp; Finance</h3><p>Tax-ready accounting, invoicing and payment collection, connected to sales.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-inventory-pos.html"><span class="tag">Implement</span><h3>Zoho Inventory &amp; POS</h3><p>Stock, warehouses, orders and retail billing in one accurate view.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-desk.html"><span class="tag">Implement</span><h3>Zoho Desk</h3><p>Ticketing, SLAs and customer support that never lets a request slip.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/zoho-people.html"><span class="tag">Implement</span><h3>Zoho People / HRMS</h3><p>Attendance, leave, onboarding and payroll workflows, simplified.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/custom-development.html"><span class="tag">Automate</span><h3>Custom Development &amp; Automation</h3><p>Blueprints, approvals, Deluge functions and integrations via Zoho Flow and APIs.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/ai-implementation.html"><span class="tag">Automate</span><h3>AI-Enabled Implementation</h3><p>Practical use of Zoho Zia and Zoho MCP to predict, summarise and automate.</p><span class="more">Learn more →</span></a>
+      <a class="card" href="services/training-support.html"><span class="tag">Enable</span><h3>Training &amp; Support</h3><p>Hands-on training built on your actual configuration, not generic demos.</p><span class="more">Learn more →</span></a>
     </div>
   </div>
 </section>
 
-<!-- APPROACH / WHY US -->
-<section>
+<!-- APPROACH -->
+<section class="block">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Why Veeraj Consulting</span>
       <h2>A business-first, technology-agnostic approach</h2>
       <p>We fit the solution to your existing landscape. If Zoho isn't the right answer for part of your business, we'll tell you.</p>
     </div>
-    <div class="grid g4 steps">
-      <div class="step"><h3>Discover</h3><p>A structured look at how work happens today — where data lives, who touches it and where the friction sits.</p></div>
-      <div class="step"><h3>Design</h3><p>Platform and licensing decisions follow the process, so you pay only for what you need.</p></div>
-      <div class="step"><h3>Deliver</h3><p>Agile, continuous delivery in short cycles, so you see working results early and often.</p></div>
-      <div class="step"><h3>Document &amp; Hand Over</h3><p>Everything documented well enough for your own team to maintain — no ongoing dependency.</p></div>
+    <div class="grid g4 steps4">
+      <div class="card"><h3>Discover</h3><p>A structured look at how work happens today — where data lives, who touches it and where the friction sits.</p></div>
+      <div class="card"><h3>Design</h3><p>Platform and licensing decisions follow the process, so you pay only for what you need.</p></div>
+      <div class="card"><h3>Deliver</h3><p>Agile, continuous delivery in short cycles, so you see working results early and often.</p></div>
+      <div class="card"><h3>Document &amp; Hand Over</h3><p>Everything documented well enough for your own team to maintain — no ongoing dependency.</p></div>
     </div>
   </div>
 </section>
 
-<!-- OFFERS -->
-<section class="alt" id="start">
+<!-- WAYS TO WORK WITH US -->
+<section class="block" id="start">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Ways to get started</span>
+      <span class="eyebrow">Ways to work with us</span>
       <h2>Two simple ways to begin</h2>
     </div>
     <div class="grid g2">
@@ -241,7 +302,7 @@ footer a:hover{color:#fff}
           <li>A look at your current Zoho setup, if any</li>
           <li>No agenda, no pitch, no obligation</li>
         </ul>
-        <button class="btn btn-book" onclick="openDiscovery()">Book the Free Call</button>
+        <button class="btn btn-book" type="button" onclick="openDiscovery()">Book the Free Call</button>
       </div>
       <div class="offer featured">
         <span class="tag">Most useful first step</span>
@@ -253,51 +314,55 @@ footer a:hover{color:#fff}
           <li>Written report and quick-win roadmap</li>
           <li>Short video walkthrough, all within 48 hours</li>
         </ul>
-        <button class="btn btn-book" onclick="openAudit()">Book the Health Check</button>
+        <button class="btn btn-book" type="button" onclick="openAudit()">Book the Health Check</button>
       </div>
     </div>
+    <a class="link" href="engagement-models.html">Projects, sprints and retainers →</a>
   </div>
 </section>
 
 <!-- INDUSTRIES -->
-<section>
+<section class="block">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Industries</span>
       <h2>Built for how your industry works</h2>
     </div>
     <div class="chips">
-      <span class="chip">Trading &amp; FMCG</span>
-      <span class="chip">Logistics &amp; International Trade</span>
-      <span class="chip">Manufacturing</span>
-      <span class="chip">Professional Services</span>
-      <span class="chip">E-commerce</span>
-      <span class="chip">B2B SaaS</span>
+      <span class="ind">Trading &amp; FMCG</span>
+      <span class="ind">Logistics &amp; International Trade</span>
+      <span class="ind">Manufacturing</span>
+      <span class="ind">Professional Services</span>
+      <span class="ind">E-commerce &amp; Retail</span>
+      <span class="ind">B2B SaaS &amp; Technology</span>
     </div>
-    <p style="margin-top:24px"><a href="industries.html" style="color:var(--blue);font-weight:600;text-decoration:none">See industry solutions →</a></p>
+    <a class="link" href="industries.html">See industry solutions →</a>
   </div>
 </section>
 
 <!-- Client results section archived until real testimonials are available -->
 
 <!-- CTA -->
-<section class="cta">
+<section class="block">
   <div class="wrap">
-    <h2>Let's see what your business really needs.</h2>
-    <p>Start with a free 30-minute conversation. No pitch — just clarity on where you are and what would help most.</p>
-    <button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button>
+    <div class="cta">
+      <div>
+        <h2>Which of your processes could run on autopilot?</h2>
+        <p>Let's find out in a free 30-minute call. No pitch, no commitment.</p>
+      </div>
+      <button class="btn btn-book" type="button" onclick="openDiscovery()">Book a free call</button>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <div class="f-logo"><img src="assets/logo.png" alt="Veeraj Consulting"></div>
-        <p>Business-first Zoho consulting for growing businesses. Serving clients in the UK, Europe, the US and India.</p>
+        <div class="f-logo"><img src="assets/logo.png" alt="Veeraj Consulting" width="113" height="34"></div>
+        <p>Business-first Zoho consulting, automation and AI. Serving clients across India and abroad.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -313,7 +378,8 @@ footer a:hover{color:#fff}
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-              <li><a href="engagement-models.html">How We Work</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="engagement-models.html">How We Work</a></li>
           <li><a href="https://rajeevsrivastava.com" target="_blank" rel="noopener">Founder: Rajeev Srivastava ↗</a></li>
         </ul>
       </div>
@@ -324,7 +390,6 @@ footer a:hover{color:#fff}
           <li><a href="tel:+919717131413">+91 97171 31413</a></li>
           <li><a href="https://wa.me/919717131413" target="_blank" rel="noopener">WhatsApp us ↗</a></li>
           <li><a href="https://www.linkedin.com/company/veeraj-consulting" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="contact.html">Contact page</a></li>
         </ul>
       </div>
     </div>
@@ -335,28 +400,31 @@ footer a:hover{color:#fff}
   </div>
 </footer>
 
-<button class="btn btn-book float-book" onclick="openDiscovery()" aria-label="Book a free discovery call">📅 <span>Book a Free Call</span></button>
+<button class="btn btn-book float-book" type="button" onclick="openDiscovery()" aria-label="Book a free discovery call">📅 <span>Book a Free Call</span></button>
 
 <script>
-// Booking — uses Zoho Bookings modal if the embed script is loaded, else opens in a new tab
+// Booking — Zoho Bookings modal if its embed script is loaded, else a new tab
 var URL_DISCOVERY="https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000027058";
 var URL_AUDIT="https://iam-rajeevsrivastava.zohobookings.in/portal-embed#/439731000000027077";
-function book(u){
-  try{ if(window.Bookings && typeof Bookings.modal==="function"){ Bookings.modal(u); return; } }catch(e){}
-  window.open(u,"_blank","noopener");
-}
+function book(u){try{if(window.Bookings&&typeof Bookings.modal==="function"){Bookings.modal(u);return;}}catch(e){}window.open(u,"_blank","noopener");}
 function openDiscovery(){book(URL_DISCOVERY)}
 function openAudit(){book(URL_AUDIT)}
 
+// Theme toggle (remembered)
+document.getElementById("themeBtn").addEventListener("click",function(){
+  var d=document.documentElement,t=d.getAttribute("data-theme")==="dark"?"light":"dark";
+  d.setAttribute("data-theme",t);try{localStorage.setItem("vc_theme",t)}catch(e){}
+});
+
 // Years of experience from June 2014
-(function(){var s=new Date(2014,5,1),n=new Date(),y=n.getFullYear()-s.getFullYear();if(n.getMonth()<s.getMonth())y--;document.getElementById("yrs").textContent=y;})();
+(function(){var s=new Date(2014,5,1),n=new Date(),y=n.getFullYear()-s.getFullYear();if(n.getMonth()<s.getMonth())y--;document.querySelectorAll(".yrs").forEach(function(e){e.textContent=y});})();
 document.getElementById("yr").textContent=new Date().getFullYear();
 
 // Mobile menu
 var mb=document.querySelector(".menu-btn"),nl=document.getElementById("navLinks");
 mb.addEventListener("click",function(){var o=nl.classList.toggle("open");mb.setAttribute("aria-expanded",o);});
-</script>
-<script>
+
+// Health Check price in USD (approximate, refreshed hourly)
 (function(){var els=document.querySelectorAll(".usd");if(!els.length)return;
 function show(r){var v=(9999*r).toFixed(2);els.forEach(function(e){e.textContent="(≈ USD "+v+")";e.title="Approximate, based on today's market rate"});}
 var c=null;try{c=JSON.parse(localStorage.getItem("vc_inrusd2")||"null")}catch(e){}
