@@ -1,0 +1,18 @@
+# Veeraj Consulting
+> Business-first Zoho consulting, implementation, automation and training for growing businesses in the UK, Europe, the US and India. Founded 2026 by Rajeev Srivastava (Zoho Solutions Expert, 12+ years).
+
+## Services
+- [Zoho CRM](https://veerajconsulting.com/services/zoho-crm.html)
+- [Zoho Books](https://veerajconsulting.com/services/zoho-books.html)
+- [Zoho Inventory & POS](https://veerajconsulting.com/services/zoho-inventory-pos.html)
+- [Zoho Desk](https://veerajconsulting.com/services/zoho-desk.html)
+- [Zoho People / HRMS](https://veerajconsulting.com/services/zoho-people.html)
+- [Custom development & integrations](https://veerajconsulting.com/services/custom-development.html)
+- [AI in Zoho: Zia & Zoho MCP](https://veerajconsulting.com/services/ai-implementation.html)
+- [Training & support](https://veerajconsulting.com/services/training-support.html)
+
+## Company
+- [About](https://veerajconsulting.com/about.html)
+- [How we work & pricing](https://veerajconsulting.com/engagement-models.html)
+- [Industries](https://veerajconsulting.com/industries.html)
+- [Contact / book a free call](https://veerajconsulting.com/contact.html)
