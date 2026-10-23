@@ -8,6 +8,7 @@
 - Never invent clients, numbers, testimonials. Company voice "we"; no city in marketing copy; don't use iam@rajeevsrivastava.com.
 - FAQs only state facts already approved on the site (offers, durations, markets).
 ## What worked
-- (Awaiting first Search Console data — upload to /seo-data/YYYY-MM/)
+- 2026-10-23 baseline (site indexed ~21 Oct): 4 impr, 0 clicks. Only queries: "zoho desk consultants" (pos 61), "zoho it help desk specialists" (pos 70). Impressions from US (3) and UK (1) — matches target markets. Branded pages rank top 10. Too early to judge.
 ## Approved / rejected
 - 2026-10-22: Phase 1 plan approved.
+- 2026-10-23: Phase 1 merged by Rajeev (PR #1). Rajeev prefers detailed, copy-paste briefs he can hand to the website-build chat.
