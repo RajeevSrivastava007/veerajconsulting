@@ -56,16 +56,75 @@ document.documentElement.setAttribute("data-theme",t);})();
 <div class="page-hero"><div class="wrap"><span class="eyebrow">Contact</span><h1>Let's talk about your business</h1><p>Book a free call, send us a message or reach us directly. We usually reply within one business day.</p></div></div><section class="block"><div class="wrap two">
 <div>
 <div class="head" style="margin-bottom:20px"><h2>Send us a message</h2></div>
-<form id="cform" novalidate>
-<div class="row"><div><label for="n">Name *</label><input id="n" required autocomplete="name"></div><div><label for="c">Company</label><input id="c" autocomplete="organization"></div></div>
-<div class="row"><div><label for="e">Email *</label><input id="e" type="email" required autocomplete="email"></div><div><label for="ph">Phone</label><input id="ph" type="tel" autocomplete="tel"></div></div>
-<label for="i">I'm interested in</label>
-<select id="i"><option>General enquiry</option><option>Zoho CRM</option><option>Zoho Books &amp; Finance</option><option>Zoho Inventory &amp; POS</option><option>Zoho Desk</option><option>Zoho People / HRMS</option><option>Custom development &amp; automation</option><option>AI-enabled implementation</option><option>Training &amp; support</option><option>Zoho Health Check</option></select>
-<label for="m">How can we help? *</label><textarea id="m" required></textarea>
-<p id="ferr" role="alert" style="color:#B42318;margin-top:10px"></p>
-<button class="btn btn-book" type="submit" style="margin-top:12px">Send Message</button>
-<p style="font-size:13px;color:var(--muted);margin-top:10px">This opens your email app with the message ready to send.</p>
+<form id="webform1221661000001104126" name="WebToLeads1221661000001104126" accept-charset="UTF-8" novalidate>
+<!-- Zoho CRM web form: hidden fields below are required by Zoho, do not remove -->
+<input type="text" style="display:none" name="xnQsjsdp" value="38b38748add4cca2e23282302c9b1d4f51b1c15a2ab8920045a6c0c3f2668f1f">
+<input type="hidden" name="zc_gad" id="zc_gad" value="">
+<input type="text" style="display:none" name="xmIwtLD" value="ba759f0496f928768ccd4a989a65e61531233a053db0ae5571b091a2b0f9dbdf4ca2c3eddfec0f7b8e500cbed5591564">
+<input type="text" style="display:none" name="actionType" value="TGVhZHM=">
+<input type="text" style="display:none" name="returnURL" value="null">
+<input type="text" style="display:none" id="ldeskuid" name="ldeskuid">
+<input type="text" style="display:none" id="LDTuvid" name="LDTuvid">
+<input type="hidden" name="Lead Source" value="Contact Us">
+<input type="text" style="display:none" name="aG9uZXlwb3Q" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="row"><div><label for="First_Name">First name *</label><input type="text" id="First_Name" name="First Name" maxlength="40" required autocomplete="given-name"></div>
+<div><label for="Last_Name">Last name *</label><input type="text" id="Last_Name" name="Last Name" maxlength="80" required autocomplete="family-name"></div></div>
+<div class="row"><div><label for="Company">Company *</label><input type="text" id="Company" name="Company" maxlength="200" required autocomplete="organization"></div>
+<div><label for="Mobile">Mobile *</label><input type="tel" id="Mobile" name="Mobile" maxlength="30" required autocomplete="tel" placeholder="+44 …"></div></div>
+<label for="Email">Work email *</label><input type="email" id="Email" name="Email" maxlength="100" required autocomplete="email">
+<label for="LEADCF5">I'm interested in</label>
+<select id="LEADCF5" name="LEADCF5">
+<option value="General enquiry">General enquiry</option>
+<option value="Zoho CRM">Zoho CRM</option>
+<option value="Zoho Books &amp; Finance">Zoho Books &amp; Finance</option>
+<option value="Zoho Inventory &amp; POS">Zoho Inventory &amp; POS</option>
+<option value="Zoho Desk">Zoho Desk</option>
+<option value="Zoho People / HRMS">Zoho People / HRMS</option>
+<option value="Custom development &amp; automation">Custom development &amp; automation</option>
+<option value="Al-enabled implementation">AI-enabled implementation</option>
+<option value="Training &amp; support">Training &amp; support</option>
+<option value="Zoho Health Check">Zoho Health Check</option>
+</select>
+<label for="LEADCF4">How can we help?</label><textarea id="LEADCF4" name="LEADCF4"></textarea>
+<p id="ferr" role="alert" aria-live="assertive" style="color:#E5484D;margin-top:10px;min-height:1.2em"></p>
+<button class="btn btn-book" type="submit" id="formsubmit" style="margin-top:6px">Send Message</button>
+<p style="font-size:13px;color:var(--muted);margin-top:10px">We usually reply within one business day. Your details go straight to our team and are handled as described in our <a href="privacy.html" style="color:var(--acc)">Privacy Policy</a>.</p>
 </form>
+<script>
+/* Zoho CRM Web-to-Lead: same endpoint and fields as the Zoho-generated form, with inline validation instead of pop-ups. */
+(function(){
+  var form=document.getElementById("webform1221661000001104126"),err=document.getElementById("ferr"),btn=document.getElementById("formsubmit");
+  function fail(msg,el){err.textContent=msg;if(el)el.focus();}
+  function track(){try{if(window.$zoho&&$zoho.salesiq&&$zoho.salesiq.visitor){
+    form.LDTuvid.value=$zoho.salesiq.visitor.uniqueid();
+    $zoho.salesiq.visitor.name(form["First Name"].value+" "+form["Last Name"].value);
+    $zoho.salesiq.visitor.email(form["Email"].value);}}catch(e){}}
+  form.addEventListener("submit",function(e){
+    e.preventDefault();err.textContent="";
+    var req=[["First Name","Please enter your first name."],["Last Name","Please enter your last name."],["Company","Please enter your company name."],["Email","Please enter your work email."],["Mobile","Please enter a mobile number so we can reach you."]];
+    for(var i=0;i<req.length;i++){var f=form[req[i][0]];if(!f.value.trim()){return fail(req[i][1],f);}}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(form["Email"].value.trim())){return fail("Please enter a valid email address, like name@company.com.",form["Email"]);}
+    track();
+    if(typeof _wfa_track!=="undefined"&&_wfa_track.wfa_submit){_wfa_track.wfa_submit(e);}
+    btn.disabled=true;btn.textContent="Sending…";
+    fetch("https://crm.zoho.in/crm/WebToLeadForm",{method:"POST",body:new FormData(form),cache:"no-cache"})
+    .then(function(r){var ct=r.headers.get("Content-Type")||"";return ct.indexOf("application/json")>-1?r.json():r.text();})
+    .then(function(d){
+      if(d&&typeof d==="object"&&(d.invalidCaptcha==="true"||d.actionsubmit==="error_msg"||d.actionsubmit==="captcha_error")){
+        btn.disabled=false;btn.textContent="Send Message";
+        return fail((d.message||d.actionvalue||"Something went wrong.")+" Please try again, or email rajeev@veerajconsulting.com.");
+      }
+      if(typeof _wfa_track!=="undefined"&&_wfa_track.wfa_post_submit){_wfa_track.wfa_post_submit(e);}
+      try{sessionStorage.setItem("vc_thanks",JSON.stringify({t:Date.now(),n:form["First Name"].value.trim().slice(0,40)}));}catch(x){}
+      location.assign("thank-you.html");
+    })
+    .catch(function(){btn.disabled=false;btn.textContent="Send Message";
+      fail("We couldn't send your message just now. Please try again, or email rajeev@veerajconsulting.com.");});
+  });
+})();
+</script>
+<!-- Zoho CRM web form analytics: do not remove -->
+<script id="wf_anal" src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=9bbf018cdf6ca2a9a5f433d1af0740acf4cc3a9a11c5bbc8cce380e02c06648a15fb980bffc74f9d550f27044c8bb621gid00171b4bc110c284bef2ad5872ee782a7ffdc92e3ba61064b6466bdf04e207f6gidc771337acffed3eccdc08d48613a94206f4f00ee46740ff66082822d30a83272gid2faa4ef268714ca7c2edd14a73cd28d1fc7503af7e4ad3a561df7f0c6a64d1bc&tw=74c2ee48ba8a43055bc63479211c6525aca85ce97dc8d9d2b5a07ae733f22a46&version=v2"></script>
 </div>
 <div>
 <div class="head" style="margin-bottom:20px"><h2>Reach us directly</h2></div>
@@ -79,13 +138,7 @@ document.documentElement.setAttribute("data-theme",t);})();
 <div class="callout" style="margin-top:28px"><h3>Prefer to talk?</h3><p>Book a free 30-minute discovery call at a time that suits you.</p><p style="margin-top:14px"><button class="btn btn-book" onclick="openDiscovery()">Book a Free Call</button></p></div>
 </div>
 </div></section>
-<script>
-document.getElementById("cform").addEventListener("submit",function(ev){ev.preventDefault();
-var g=function(i){return document.getElementById(i).value.trim()};var err=document.getElementById("ferr");
-if(!g("n")||!g("m")||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g("e"))){err.textContent="Please add your name, a valid email and a message.";return;}err.textContent="";
-var body="Name: "+g("n")+"\nCompany: "+g("c")+"\nEmail: "+g("e")+"\nPhone: "+g("ph")+"\nInterested in: "+g("i")+"\n\n"+g("m");
-location.href="mailto:rajeev@veerajconsulting.com?subject="+encodeURIComponent("Website enquiry: "+g("i"))+"&body="+encodeURIComponent(body);});
-</script><section class="block"><div class="wrap"><div class="cta"><div><h2>Let's see what your business really needs.</h2><p>Start with a free 30-minute conversation. No pitch — just clarity on where you are and what would help most.</p></div><div class="actions" style="justify-content:flex-start"><button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button></div></div></div></section>
+<section class="block"><div class="wrap"><div class="cta"><div><h2>Let's see what your business really needs.</h2><p>Start with a free 30-minute conversation. No pitch — just clarity on where you are and what would help most.</p></div><div class="actions" style="justify-content:flex-start"><button class="btn btn-book" onclick="openDiscovery()">Book a Free Discovery Call</button></div></div></div></section>
 </main>
 
 <footer>
@@ -133,5 +186,6 @@ location.href="mailto:rajeev@veerajconsulting.com?subject="+encodeURIComponent("
 
 <button class="btn btn-book float-book" type="button" onclick="openDiscovery()" aria-label="Book a free discovery call">📅 <span>Book a Free Call</span></button>
 <script src="assets/site.js"></script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq57f9691f9b40b9df751fe7f94f20219c876dc238a08c9a4345e0814fa66ab7d3" defer></script>
 </body>
 </html>

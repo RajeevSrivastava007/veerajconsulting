@@ -12,3 +12,5 @@
 | 2026-10-23 | sitemap.xml + llms.txt entries; links from services.html, zoho-crm, zoho-books, ai-implementation, custom-development | Internal linking + GEO | On draft |
 | 2026-10-23 | Zoho One page: 50+ apps (per zoho.com/all-products), apps by category, 9 suites, AI at Zoho; MTD for VAT wording (Zoho Books MTD-compliant) | Accuracy + topical depth | On draft |
 | 2026-10-23 | MCP page: definition, clients, OAuth/logging guardrails aligned with help.zoho.com/portal/en/kb/mcp | Accuracy for AI answer engines | On draft |
+| 2026-10-23 | thank-you.html added: noindex, no canonical/schema, not in sitemap; reachable only after a form submission | Keep a private page out of search | On draft |
+| 2026-10-23 | SalesIQ tracking script added before </body> on all pages; contact form posts to Zoho CRM Web-to-Lead | Visitor tracking + lead capture | On draft |
