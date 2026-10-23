@@ -10,6 +10,9 @@
 - [Custom development & integrations](https://veerajconsulting.com/services/custom-development.html)
 - [AI in Zoho: Zia & Zoho MCP](https://veerajconsulting.com/services/ai-implementation.html)
 - [Training & support](https://veerajconsulting.com/services/training-support.html)
+- [Zoho Health Check (₹9,999 audit)](https://veerajconsulting.com/services/zoho-health-check.html)
+- [Zoho One implementation](https://veerajconsulting.com/services/zoho-one.html)
+- [Zoho MCP & AI agents](https://veerajconsulting.com/services/zoho-mcp-ai-agents.html)
 
 ## Company
 - [About](https://veerajconsulting.com/about.html)
