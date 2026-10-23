@@ -10,3 +10,5 @@
 | 2026-10-23 | Merged SEO phase 1 into Design E draft (head tags, schema, FAQs kept verbatim; lang=en-GB) | Keep SEO through redesign | On draft |
 | 2026-10-23 | New pages: services/zoho-health-check, zoho-one, zoho-mcp-ai-agents (Service+BreadcrumbList+FAQPage JSON-LD, canonical, OG) | Target "zoho audit", "zoho one consultant uk", "zoho mcp" | On draft |
 | 2026-10-23 | sitemap.xml + llms.txt entries; links from services.html, zoho-crm, zoho-books, ai-implementation, custom-development | Internal linking + GEO | On draft |
+| 2026-10-23 | Zoho One page: 50+ apps (per zoho.com/all-products), apps by category, 9 suites, AI at Zoho; MTD for VAT wording (Zoho Books MTD-compliant) | Accuracy + topical depth | On draft |
+| 2026-10-23 | MCP page: definition, clients, OAuth/logging guardrails aligned with help.zoho.com/portal/en/kb/mcp | Accuracy for AI answer engines | On draft |
