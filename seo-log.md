@@ -20,3 +20,6 @@
 | 2026-11-04 | Post-release check of live site (21 pages): Design E kept all SEO tags; 3 new pages indexed-ready, linked from 4–5 pages each | Verify release | Done — no fixes needed |
 | 2026-11-04 | GSC file received was the same 23 Oct export (no new data) | — | Asked Rajeev for fresh export |
 | 2026-11-10 | GSC export received, but filtered to Country = UAE only: 1 impression, 1 click (22 Oct, position 1) | First click; filter hides other markets | Asked Rajeev for unfiltered export |
+| 2026-11-10 | Unfiltered GSC (21 Oct–8 Nov): 6 clicks, 72 impr. India 5 clicks; UK 49 impr (pos ~82); US 9 impr. Desk page = 54 impr | Data | Saved seo-data/2026-11/gsc-2026-11-10.xlsx |
+| 2026-11-10 | Zoho Desk: title/meta now target "Zoho Desk consultants" + IT help desk; Service schema description synced | Top query (50 impr) at pos ~80 | On branch seo/2026-11-10 |
+| 2026-11-10 | Zoho Desk: FAQ "Can Zoho Desk be used as an IT help desk?" (visible + FAQPage) | Matches 2nd query "zoho it help desk consultants" | On branch seo/2026-11-10 |

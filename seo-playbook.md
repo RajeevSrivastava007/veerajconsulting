@@ -9,6 +9,8 @@
 - FAQs only state facts already approved on the site (offers, durations, markets).
 ## What worked
 - 2026-10-23 baseline (site indexed ~21 Oct): 4 impr, 0 clicks. Only queries: "zoho desk consultants" (pos 61), "zoho it help desk specialists" (pos 70). Impressions from US (3) and UK (1) — matches target markets. Branded pages rank top 10. Too early to judge.
+- 2026-11-10 (first 3 weeks): branded/home searches convert (India 5 clicks, home CTR 36%). Non-branded demand found us first for Zoho Desk in the UK (49 impr) — position ~80, so content depth needed. New pages (Health Check, Zoho One, MCP) have no impressions yet. Always check the GSC Filters sheet: one export came filtered to UAE.
+
 ## Approved / rejected
 - 2026-10-22: Phase 1 plan approved.
 - 2026-10-23: Phase 1 merged by Rajeev (PR #1). Rajeev prefers detailed, copy-paste briefs he can hand to the website-build chat.
