@@ -17,3 +17,6 @@
 | 2026-10-23 | MCP page: definition, clients, OAuth/logging guardrails aligned with help.zoho.com/portal/en/kb/mcp | Accuracy for AI answer engines | Live (Design E release, 23 Oct) |
 | 2026-10-23 | thank-you.html added: noindex, no canonical/schema, not in sitemap; reachable only after a form submission | Keep a private page out of search | Live (Design E release, 23 Oct) |
 | 2026-10-23 | SalesIQ tracking script added before </body> on all pages; contact form posts to Zoho CRM Web-to-Lead | Visitor tracking + lead capture | Live (Design E release, 23 Oct) |
+| 2026-11-04 | Post-release check of live site (21 pages): Design E kept all SEO tags; 3 new pages indexed-ready, linked from 4–5 pages each | Verify release | Done — no fixes needed |
+| 2026-11-04 | GSC file received was the same 23 Oct export (no new data) | — | Asked Rajeev for fresh export |
+| 2026-11-10 | GSC export received, but filtered to Country = UAE only: 1 impression, 1 click (22 Oct, position 1) | First click; filter hides other markets | Asked Rajeev for unfiltered export |
